@@ -19,6 +19,7 @@
   </head>
 
   <body>
+    <!-- removed
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
@@ -35,7 +36,7 @@
             <li class="active"><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
           </ul>
-        </div><!--/.nav-collapse -->
+        </div><!--/.nav-collapse 
       </div>
     </nav>
 
@@ -53,18 +54,21 @@
       </div>
     </div>
 
-    <br>
+    <br>-->
     
     <div class="container" align="center">
       <!-- Request the URL -->
-      <form action="javascript:getData();">
+      <!-- Give form an ID -->
+      <form id="form" action="javascript:getData();">
         <div class="form-group col-md-6">
+		<!-- Replaced above
           <input type="text" id="querySearch" name='querySearch' placeholder="Enter the authors to look up here"><br>
-        </div>
-      
-        <div>
+        </div>-->
+          <input type="text" id="querySearch" name='querySearch' placeholder="Tarling EJ[Author] and de Aguiar Vallim TQ[Author]" value="Tarling EJ[Author] and de Aguiar Vallim TQ[Author]" hidden>
+        <!-- <div>
+	Removed
           <button type="submit" class="button">Show me the network!</button>
-        </div>
+        </div>-->
       </form>
     </div>
     
@@ -77,7 +81,10 @@
           <!-- This block can be reused as many times as needed -->
           <section id="linkStrengthSlider" class="range-slider">
             <span class="rangeValues"></span>
-            <input value="0.01" min="0.001" max="0.1" step="0.001" type="range">
+            <!-- Replaced above
+	    <input value="0.01" min="0.001" max="0.1" step="0.001" type="range">
+            <input value="0.05" min="0.001" max="0.1" step="0.001" type="range">-->
+	    <input value="0.026" min="0.001" max="0.1" step="0.001" type="range">
             <input value="0.05" min="0.001" max="0.1" step="0.001" type="range">
           </section>
         </div>
@@ -90,8 +97,11 @@
           <!-- This block can be reused as many times as needed -->
           <section id="nodeStrengthSlider" class="range-slider">
             <span class="rangeValues"></span>
-            <input value="-100" min="-800" max="0" step="1" type="range">
-            <input value="-10" min="-800" max="0" step="1" type="range">
+            <!-- Replaced above
+	    <input value="-100" min="-800" max="0" step="1" type="range">
+            <input value="-10" min="-800" max="0" step="1" type="range">-->
+            <input value="-551" min="-800" max="0" step="1" type="range">
+            <input value="0" min="-800" max="0" step="1" type="range">
           </section>
         </div>
       </div>
@@ -102,6 +112,7 @@
 
 
     <div id="viz" width="100%"></div>
+    <footer>Modified from <a href= "https://gcalmettes.github.io/projects/" target= "_Blank">GCALMETTES</a> | Copyright (c) 2018.</footer>
 
     <script src="https://d3js.org/d3.v5.min.js"></script>
     <script src="src/js/utils.js"></script>
@@ -116,7 +127,8 @@
     <style>
 
     canvas {
-    	position: absolute;
+    	/*position: absolute;*/
+	position: static;
     	margin: 0;
       border:1px solid #000000;
     }
