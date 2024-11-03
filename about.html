@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="NetworkPub">
+    <meta name="author" content="Guillaume Calmettes">
+
+    <title>networkPubs</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="src/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="src/css/custom.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">networkPubs</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <br><br>
+
+    <div class="container">
+      <h1>What is this?</h1>
+      <p>
+        A simple app to visualize a rudimentary network of the scientific collaboration between investigators in the biomedical and life sciences field based on their common publications. Depending on the query you entered, the outputed network could represented the network of the most collaborative investigators in a specific area of the biomedical field or represent the collaboration connections for a specific author.
+      </p>
+      <h1>How does it work?</h1>
+      <p>
+        Two scientists are considered connected if they have authored a paper together and explicit networks of such connections are constructed by using data drawn from the <a href="https://www.ncbi.nlm.nih.gov/pubmed/">NCBI Pubmed database</a> maintained by the <a href="https://www.ncbi.nlm.nih.gov/">Entrez query and database system at the National Center for Biotechnology Information (NCBI)</a>. Because the Pubmed database only records biomedical and life sciences journal articles, the networks that can be constructed are limited to scientist having authoring papers in those fields.
+      </p>
+      <h1>What type of queries are supported?</h1>
+      <p>
+        This app will consider whatever you entered in the search box as a valid Pubmed query. Pubmed queries can be built with specific keywords to better focus your request (e.g.: if you want to construct the network from the common publications of two specific authors, use the "[author]" keyword, for example "Weiss jn[author] and Bers dm[author]").
+      </p>
+      <p>
+        If you are not familiar with advanced Pubmed queries, please refer to the <a href="https://www.ncbi.nlm.nih.gov/pubmed/advanced">PubMed Advanced Search Builder</a> tool to construct the specific query for your need!
+      </p>
+      <p>
+        For better performance, the outputed network only presents the result from the most recent 60 publications matching the Pubmed query.
+      </p>
+    </div>
+  
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>    
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="src/js/bootstrap.min.js"></script>
+  </body>
+</html>
