@@ -199,4 +199,6 @@ window.onload = function(){
           }
         }
       }
+	// for the network to start running as page loads
+document.getElementById("form").submit();
 }
