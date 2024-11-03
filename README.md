@@ -1,3 +1,6 @@
+###Modification for ETVLAB 
+**Modifications to the original code were made in accordance with Copyright (c) 2018 and flagged to meet the requirements of the ETVLAB website, with a search mechanism defined and locked for specific authors.**
+
 # networkPubs
 A quick way to get a network of science investigators based on their common publications.
 
